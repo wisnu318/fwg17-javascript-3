@@ -1,0 +1,1 @@
+//buatkan program menggunaka method fetch untuk menampilkan semua nama(hanya nama) dari rest API URL (https://jsonplaceholder.typicode.com/users) dengan debugger vscode
