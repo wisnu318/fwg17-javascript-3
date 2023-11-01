@@ -1,6 +1,6 @@
 const getMonth = (callback) => {
     setTimeout(() => {
-        let error = false
+        let error = true
         let month = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember']
         if (!error) {
             callback(null, month)
@@ -10,4 +10,15 @@ const getMonth = (callback) => {
     }, 4000)
 }
 
-//buatkan program callback untuk melanjutkan dan menampilkan semua bulan menggunakan method map. Contoh : getMonth(showMonth?)
+const showMonth = (error, listMonth) => {
+    if (error) {
+        console.log(error.message, [])
+    } else {
+        console.log(listMonth.map(month => {
+            return month
+        }))
+    }
+}
+
+
+getMonth(showMonth)
